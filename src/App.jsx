@@ -1,10 +1,16 @@
-import { useAddress, useMetamask, useEditionDrop } from "@thirdweb-dev/react";
+import {
+  useAddress,
+  useMetamask,
+  useEditionDrop,
+  useDisconnect,
+} from "@thirdweb-dev/react";
 import { useState, useEffect } from "react";
 
 const App = () => {
   // Use the hooks thirdweb give us.
   const address = useAddress();
   const connectWithMetamask = useMetamask();
+  const desconnect = useDisconnect();
   console.log("👋 Address:", address);
 
   // Initialize our editionDrop contract
@@ -74,8 +80,11 @@ const App = () => {
   if (hasClaimedNFT) {
     return (
       <div className="member-page">
-        <h1>🍪DAO Member Page</h1>
-        <p>Congratulations on being a member</p>
+        <h1>🍪Página de membros da mansão</h1>
+        <p>Parabeéns por ser um membro</p>
+        {/* <button onClick={desconnect} className="btn-hero">
+          Desconectar
+        </button> */}
       </div>
     );
   }
@@ -83,7 +92,7 @@ const App = () => {
   // Render mint nft screen.
   return (
     <div className="mint-nft">
-      <h1>Mint sua NFT de mebro (DE GRATIS)</h1>
+      <h1>Minta a sua NFT de mebro aí (DE GRATIS TIO)</h1>
       <button disabled={isClaiming} onClick={mintNft}>
         {isClaiming ? "Mintando..." : "Mint sua NFT (FREE)"}
       </button>

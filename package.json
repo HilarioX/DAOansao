@@ -34,20 +34,7 @@
       "last 1 safari version"
     ]
   },
-  "description": "### **Welcome 👋** To get started with this project, clone this repo and follow these commands:",
-  "main": "index.js",
   "devDependencies": {
-    "node": "^17.9.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/buildspace/buildspace-dao-starter.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/buildspace/buildspace-dao-starter/issues"
-  },
-  "homepage": "https://github.com/buildspace/buildspace-dao-starter#readme"
+    "node": "^16.15.1"
+  }
 }
